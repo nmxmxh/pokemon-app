@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  background: rgb(236, 174, 174);
+  min-height: 100vh;
+}
