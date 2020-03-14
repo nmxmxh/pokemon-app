@@ -2,7 +2,90 @@
   margin: 0;
 }
 
-.app-container {
-  background: rgb(236, 174, 174);
-  min-height: 100vh;
+body {
+  background-color: #374A67;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.app-container {
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 50%;
+  padding: 20px 40px;
+  background-color: #36382E;
+  border-radius: 5px;
+  color: white;
+}
+
+.app-container h1 {
+  text-align: center;
+  font-variant: small-caps;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px black;
+  transition: all 0.3s linear;
+}
+
+.app-container form {
+  margin: auto;
+  text-align: center;
+}
+
+.app-container label {
+  font-size: 1.4rem;
+}
+
+.search-container {
+  margin: auto;
+  margin-top: 10px;
+  width: 60%;
+}
+
+.search-container select {
+  width: 90%;
+  height: 30px;
+  background-color: #EDE6E3;
+  border-radius: 3px;
+  border: 0px solid transparent;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.search-container select option {
+  text-align: center;
+  margin: auto;
+}
+
+.search-container button {
+  height: 40px;
+  width: 75px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-variant: small-caps;
+  transition: all 0.3s ease-in;
+}
+
+.search-container button:hover {
+  background-color: #F06449;
+  color: #EDE6E3;
+}
+
+

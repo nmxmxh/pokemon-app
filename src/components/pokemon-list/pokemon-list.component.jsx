@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import PokemonCard from '../pokemon-card/pokemon-card.component'
+import PokemonCard from '../pokemon-card/pokemon-card.component';
+
+import './pokemon-list.styles.scss';
 
 class PokemonList extends Component {
     renderPokemons() {
@@ -24,14 +26,14 @@ class PokemonList extends Component {
     render()  {
        if(this.props.pokemonResult.length > 0) {
            return(
-               <div>
+               <div className='pokemon-list'>
                    {this.renderPokemons()}
                </div>
            )
        }
 
        return (
-           <div>
+           <div className='pokemon-list'>
                ...
            </div>
        )

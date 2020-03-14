@@ -14,13 +14,15 @@ class App extends Component {
   }
 
   onSelectTypeChange = (event) => {
-    this.setState({type: event.target.value })
+    this.setState({
+      type: event.target.value,
+      pokemonList: [] 
+    })
   }
 
   onButtonClick = (event) => {
     event.preventDefault();
 
-    // const API_URI = 'https://pokeapi.co/api/v2/type/';
     let type = this.state.type;
 
     fetch(`https://pokeapi.co/api/v2/type/${type}/`)
@@ -37,30 +39,30 @@ class App extends Component {
   }
 
   render() {
-      console.log("Current State : ", this.state)
-
       return(
-          <div className='container app-container'>
+          <div className='app-container'>
             <div>
-              <h4>Our Small Pokemon App</h4>
+              <h1>Nobert's Pokemon App</h1>
                   <form>
-                  <label>Choose your required type!</label>
+                  <label>Choose your required type</label>
                   <br />
-                    <select onChange={this.onSelectTypeChange}>
-                      <option value='1'>normal</option>
-                      <option value='2'>fighting</option>
-                      <option value='3'>flying</option>
-                      <option value='4'>poison</option>
-                    </select>
-                    <button 
-                      className='btn btn-success'
-                      onClick={this.onButtonClick}
-                    >
-                      Search
+                    <div className='search-container'>
+                      <select onChange={this.onSelectTypeChange}>
+                        <option value='1'>normal</option>
+                        <option value='2'>fighting</option>
+                        <option value='3'>flying</option>
+                        <option value='4'>poison</option>
+                      </select>
+                      <button 
+                        className='btn'
+                        onClick={this.onButtonClick}
+                      >
+                        Search
                       </button>
+                    </div>
                   </form>
                   <br />
-                  <PokemonList pokemonResult={this.state.pokemonList} />            
+                  <PokemonList className='pokemon-list' pokemonResult={this.state.pokemonList} />            
             </div>
           </div>
       )

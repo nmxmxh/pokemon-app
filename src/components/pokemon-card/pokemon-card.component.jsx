@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './pokemon-card.styles.scss';
+
 class PokemonCard extends Component {
     constructor() {
         super()
@@ -41,7 +43,7 @@ class PokemonCard extends Component {
                     className="pokemon-card"
                     onClick={this.onPokemonClick}
                 >
-                    name : {this.props.name}
+                    Name : {this.props.name}
                     <br />
                     url : {this.props.url}
                 </div>
@@ -55,14 +57,14 @@ class PokemonCard extends Component {
                     onClick={this.onPokemonClick}
                 >
                     <div>
-                        name : { this.props.name }
+                        Name : { this.props.name }
                         <br />
                         url : {this.props.url}
                     </div>
                     <div>
-                        <img src={ this.state.imageURL } alt="cute pokemon" />
-                        <p>weight: { this.state.weight } </p>
-                        <p>height : { this.state.height }</p>
+                        <img src={ this.state.imageURL } alt="cute pokemon" className='pokemon-card-image'/>
+                        <p>Weight: { this.state.weight } </p>
+                        <p>Height : { this.state.height }</p>
                     </div>
                 </div>
             )

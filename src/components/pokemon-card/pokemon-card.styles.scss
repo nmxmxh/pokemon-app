@@ -1,0 +1,28 @@
+.pokemon-card {
+    width: 90%;
+    height: 50px;
+    background-color: #DADAD9;
+    margin: auto;
+    margin-bottom: 5px;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px black;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:hover {
+        box-shadow: 1px 1px 0px white;
+    }
+}
+
+.pokemon-card-active {
+    transition: all 0.3s linear;
+    height: 200px;
+    box-shadow: 1px 1px 0px white;
+}
+
+.pokemon-card-image {
+    height: 100px;
+    width: 100px;
+}
