@@ -10,6 +10,10 @@
     transition: all 0.3s linear;
     cursor: pointer;
     text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         box-shadow: 1px 1px 0px white;
@@ -25,4 +29,11 @@
 .pokemon-card-image {
     height: 100px;
     width: 100px;
+}
+
+@media (max-width: 800px) {
+    .pokemon-card {
+        width: 100%;
+        font-size: 0.75rem;
+    }
 }
