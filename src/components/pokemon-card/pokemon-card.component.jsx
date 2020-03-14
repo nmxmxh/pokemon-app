@@ -56,15 +56,15 @@ class PokemonCard extends Component {
                     className="pokemon-card pokemon-card-active"
                     onClick={this.onPokemonClick}
                 >
-                    <div>
+                    <div className='pokemon-card-content'>
                         Name : { this.props.name }
                         <br />
                         url : {this.props.url}
-                    </div>
-                    <div>
-                        <img src={ this.state.imageURL } alt="cute pokemon" className='pokemon-card-image'/>
                         <p>Weight: { this.state.weight } </p>
                         <p>Height : { this.state.height }</p>
+                    </div>
+                    <div className='pokemon-card-image'>
+                        <img src={ this.state.imageURL } alt="cute pokemon" />
                     </div>
                 </div>
             )
