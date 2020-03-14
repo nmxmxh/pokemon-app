@@ -25,7 +25,7 @@ class PokemonCard extends Component {
                 height : data.height,
                 weight : data.weight,
                 imageURL : data.sprites.front_default
-            }, console.log(this.state)))
+            }))
             .catch(error => console.log(error))
         }
 
